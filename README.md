@@ -51,11 +51,12 @@ The contracts in this repository demonstrate potential for abuse. Do not deploy,
 
 ## Contributing
 
-If you have encountered similar scams or have additional insights into these contracts, please consider contributing to this repository by:
+If you have insights into potential security concerns with Shuffle.com or similar platforms, please consider contributing to this repository by:
 
 1. Opening an issue with your findings
 2. Submitting a pull request with additional analysis
-3. Sharing information about related scam contracts
+3. Sharing information about similar contract patterns that could be abused
+4. Suggesting security improvements for platforms like Shuffle.com
 
 ## License
 
