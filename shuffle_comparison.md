@@ -1,5 +1,5 @@
 # Comparison of New Contract with Previously Analyzed Contracts
-
+https://etherscan.io/advanced-filter?fadd=0xb2bd0afd6e5c19aab80b69f9a99e57f9e92fa536&tadd=0xb2bd0afd6e5c19aab80b69f9a99e57f9e92fa536&p=6
 ## Executive Summary
 
 This report compares the newly provided contract with the previously analyzed `shuffle` contract and the fraudulent contracts. The new contract exhibits significant similarities with both, but introduces additional sophisticated mechanisms that make it even more concerning from a security perspective. It appears to be part of the same family of contracts, with enhanced capabilities for potential abuse.
