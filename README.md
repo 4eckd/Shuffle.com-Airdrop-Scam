@@ -22,6 +22,7 @@ Shuffle.com-Airdrop-Scam/
 │   └── 📂 reports/               # Detailed analysis reports
 ├── 📂 decompiled/                # Individual contract analysis
 ├── 📝 CHANGELOG.md               # Version history and changes
+├── 🔗 CONTRIBUTION.md            # Contribution guidelines
 ├── 🔒 SECURITY.md                # Security guidelines and warnings
 └── ⚖️ LICENSE                    # MIT License
 ```
@@ -100,8 +101,9 @@ Our research covers comprehensive analysis of these identified malicious contrac
 ### 🚀 Getting Started
 1. **[📖 Documentation Hub](docs/index.md)** - Complete navigation guide and repository structure
 2. **[🔒 Security Guidelines](SECURITY.md)** - Safety protocols and warnings  
-3. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
-4. **[📄 License](LICENSE)** - MIT License terms
+3. **[🔗 Contribution Guidelines](CONTRIBUTION.md)** - How to contribute to security research
+4. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
+5. **[📄 License](LICENSE)** - MIT License terms
 
 ### 🔍 Deep Dive Analysis
 - **[Primary Contract (SHFL.sol)](SHFL.sol)** - Main shuffle contract decompilation

@@ -144,6 +144,7 @@ Comprehensive security guidelines and warnings:
 Shuffle.com-Airdrop-Scam/
 ├── 📄 README.md                    # Main project documentation
 ├── 📝 CHANGELOG.md                 # Version history and changes
+├── 🔗 CONTRIBUTION.md              # Contribution guidelines
 ├── 🔒 SECURITY.md                  # Security guidelines and warnings
 ├── ⚖️ LICENSE                      # MIT License
 ├── 🔧 .gitignore                   # Git ignore configuration
