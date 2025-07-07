@@ -3,7 +3,8 @@
 ![Contributing](https://img.shields.io/badge/contributing-welcome-brightgreen.svg)
 ![Collaboration](https://img.shields.io/badge/collaboration-open-blue.svg)
 ![Security](https://img.shields.io/badge/security-first-red.svg)
-![Version](https://img.shields.io/badge/version-1.0.1-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)
+![Contributors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2FCONTRIBUTION.md&count_bg=%2328A745&title_bg=%23555555&icon=users&icon_color=%23E7E7E7&title=contributors&edge_flat=false)
 
 **⚠️ SECURITY WARNING**: This repository contains analysis of malicious smart contracts. All contributions must maintain educational focus and security warnings.
 

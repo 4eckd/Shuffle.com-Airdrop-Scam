@@ -1,5 +1,9 @@
 # Cryptocurrency Airdrop Scam Analysis
 
+![Airdrop Analysis](https://img.shields.io/badge/analysis-airdrop_scams-orange.svg)
+![Report Status](https://img.shields.io/badge/status-comprehensive-green.svg)
+![Airdrop Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Freports%2Fairdrop_summary.md&count_bg=%23FF8C00&title_bg=%23555555&icon=target&icon_color=%23E7E7E7&title=airdrop+analysis&edge_flat=false)
+
 ## Executive Summary
 
 This report analyzes how the identified fraudulent smart contracts could be weaponized in an airdrop campaign to defraud a large number of victims simultaneously. Airdrops have become a popular method for distributing tokens and building communities in the cryptocurrency space, making them an attractive vector for scammers. The contracts examined contain sophisticated deception mechanisms that would be particularly effective in an airdrop scenario, potentially affecting thousands of users while creating an illusion of value and legitimacy.

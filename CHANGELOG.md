@@ -10,8 +10,26 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Planned
 - Additional contract pattern analysis
 - Enhanced detection signatures
-- Community contribution guidelines expansion
 - Integration examples for security platforms
+- Enhanced analytics and visitor tracking
+
+## [1.0.4] - 2025-07-07
+
+### Added
+- **Hit Counter Badges**
+  - Added visitor tracking badges to all major documentation files
+  - README.md: Main repository visitor counter
+  - docs/index.md: Documentation hub visitor counter
+  - SECURITY.md: Security guidelines visitor counter
+  - CONTRIBUTION.md: Contribution guidelines visitor counter
+  - docs/reports/airdrop_summary.md: Airdrop analysis visitor counter
+  - docs/reports/shuffle_report.md: Shuffle contract analysis visitor counter
+
+### Changed
+- **Version Badge Updates**
+  - Updated all version badges from 1.0.1 to 1.0.3 across documentation
+  - Synchronized version information across all files
+  - Enhanced visual consistency with color-coded tracking badges
 
 ## [1.0.1] - 2025-07-07
 

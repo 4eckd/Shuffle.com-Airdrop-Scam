@@ -1,9 +1,10 @@
 # Shuffle.com Airdrop Scam Analysis Repository
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
+![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)
 
 **⚠️ CRITICAL WARNING**: This repository contains analysis of malicious smart contracts for educational and security research purposes only. Never deploy, interact with, or send funds to any of the analyzed contracts.
 

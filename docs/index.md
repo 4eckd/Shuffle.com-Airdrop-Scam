@@ -2,8 +2,9 @@
 
 ![Documentation](https://img.shields.io/badge/docs-comprehensive-blue.svg)
 ![Analysis](https://img.shields.io/badge/analysis-complete-green.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.0.3-blue.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
+![Docs Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Findex.md&count_bg=%233D79C8&title_bg=%23555555&icon=book&icon_color=%23E7E7E7&title=docs+visitors&edge_flat=false)
 
 **⚠️ SECURITY WARNING**: This documentation covers analysis of malicious smart contracts. Never deploy, interact with, or send funds to any analyzed contracts.
 
