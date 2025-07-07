@@ -171,6 +171,12 @@ Shuffle.com-Airdrop-Scam/
     └── a.md                        # Additional analysis
 ```
 
+#### **[🔗 Contribution Guidelines](../CONTRIBUTION.md)**
+- **Purpose**: Guidelines for security-focused contributions
+- **Includes**: Issue reporting, analysis enhancement, pattern recognition, protection mechanisms
+- **Collaboration**: Encourages community participation and open discussion
+- **Recognition**: Contributors acknowledged in documentation
+
 #### **[📝 Change Log](../CHANGELOG.md)**
 - **Purpose**: Version history and development tracking
 - **Format**: Semantic versioning with detailed change documentation

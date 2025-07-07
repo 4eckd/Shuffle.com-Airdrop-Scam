@@ -13,6 +13,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Community contribution guidelines expansion
 - Integration examples for security platforms
 
+## [1.0.1] - 2025-07-07
+
+### Fixed
+- **Documentation Structure**
+  - Removed incorrect CODEBASE_INDEX.md file
+  - Integrated repository structure index directly into docs/index.md
+  - Fixed broken navigation links in README.md Getting Started section
+  - Updated repository structure diagram in README.md
+  - Corrected Academic Researchers navigation path in docs/index.md
+
+### Changed
+- **Documentation Organization**
+  - docs/index.md now serves as central documentation hub with complete repository structure
+  - Enhanced navigation with audience-specific paths
+  - Streamlined file organization with no orphaned files
+  - All navigation links verified and functional
+
 ## [1.0.0] - 2025-07-07
 
 ### Added
