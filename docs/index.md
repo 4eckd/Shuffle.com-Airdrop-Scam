@@ -134,11 +134,42 @@ Comprehensive security guidelines and warnings:
 
 ### Learning Materials
 
-#### **[📋 Repository Structure Guide](../CODEBASE_INDEX.md)**
+#### **📋 Repository Structure Index**
 - **Purpose**: Complete file structure and navigation guide
 - **Coverage**: All 42 repository files indexed and documented
 - **Includes**: File descriptions, purposes, and technical specifications
 - **Version**: 1.0.0 - Comprehensive indexing
+
+```
+Shuffle.com-Airdrop-Scam/
+├── 📄 README.md                    # Main project documentation
+├── 📝 CHANGELOG.md                 # Version history and changes
+├── 🔒 SECURITY.md                  # Security guidelines and warnings
+├── ⚖️ LICENSE                      # MIT License
+├── 🔧 .gitignore                   # Git ignore configuration
+├── 📄 SHFL.sol                     # Primary shuffle contract analysis
+├── 📂 Porter/                      # Decompiled fraudulent contracts
+│   ├── PorterRobinson.sol          # Main Porter Robinson themed contract
+│   ├── 0x02a.sol                   # Minimal fallback-only contract (7 lines)
+│   ├── 0x0e4a.sol                  # Transfer function variant (26 lines)
+│   ├── 0x231.sol                   # Minimal fallback-only contract (7 lines)
+│   ├── 0x557.sol                   # Complex name/symbol variant (183 lines)
+│   ├── 0xdac.sol                   # Contract variant
+│   └── CA 0x23d9.sol               # Contract address variant
+├── 📂 docs/                        # Primary documentation
+│   ├── 📖 index.md                 # Documentation navigation hub (this file)
+│   ├── 📝 NOTES.md                 # Development notes
+│   ├── 📋 MCP_DOCUMENT_PRIORITIES.md # Document priority guidelines
+│   └── 📂 reports/                 # Analysis reports
+│       ├── summary_report.md       # Master analysis document
+│       ├── airdrop_summary.md      # Airdrop scam mechanics (282 lines)
+│       ├── shuffle_report.md       # Shuffle contract analysis (236 lines)
+│       ├── shuffle_comparison.md   # Comparative analysis (249 lines)
+│       └── porter_analysis.md      # Porter contract family analysis
+└── 📂 decompiled/                  # Individual contract analysis
+    ├── 0.md through 5.md           # Numbered contract analysis
+    └── a.md                        # Additional analysis
+```
 
 #### **[📝 Change Log](../CHANGELOG.md)**
 - **Purpose**: Version history and development tracking
@@ -227,7 +258,7 @@ Comprehensive security guidelines and warnings:
 
 ### 🎓 Academic Researchers
 **Recommended Path**: 
-1. [Repository Structure](../CODEBASE_INDEX.md) → 2. [Methodology](reports/summary_report.md) → 3. [Comparative Analysis](reports/shuffle_comparison.md) → 4. [Full Documentation Suite](#-analysis-reports)
+1. [Repository Structure](#-repository-structure-index) → 2. [Methodology](reports/summary_report.md) → 3. [Comparative Analysis](reports/shuffle_comparison.md) → 4. [Full Documentation Suite](#-analysis-reports)
 
 ---
 
