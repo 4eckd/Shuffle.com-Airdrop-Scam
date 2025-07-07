@@ -2,7 +2,7 @@
 
 ![Airdrop Analysis](https://img.shields.io/badge/analysis-airdrop_scams-orange.svg)
 ![Report Status](https://img.shields.io/badge/status-comprehensive-green.svg)
-![Airdrop Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Freports%2Fairdrop_summary.md&count_bg=%23FF8C00&title_bg=%23555555&icon=target&icon_color=%23E7E7E7&title=airdrop+analysis&edge_flat=false)
+![Airdrop Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F4eckd%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Freports%2Fairdrop_summary.md&count_bg=%23FF8C00&title_bg=%23555555&icon=target&icon_color=%23E7E7E7&title=airdrop+analysis&edge_flat=false)
 
 ## Executive Summary
 

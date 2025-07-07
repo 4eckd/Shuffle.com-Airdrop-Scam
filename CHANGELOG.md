@@ -11,7 +11,21 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Additional contract pattern analysis
 - Enhanced detection signatures
 - Integration examples for security platforms
-- Enhanced analytics and visitor tracking
+
+## [1.0.5] - 2025-07-07
+
+### Fixed
+- **Hit Counter Badge URLs**
+  - Fixed malformed URL encoding in SECURITY.md (removed null characters)
+  - Updated all hit counter badges with correct GitHub repository URL (4eckd/Shuffle.com-Airdrop-Scam)
+  - Corrected URL encoding from placeholder 'your-username' to actual repository path
+  - Fixed SECURITY.md badge formatting issues
+
+### Changed
+- **Version Badge Synchronization**
+  - Updated version badges to v1.0.4 across README.md, docs/index.md, and CONTRIBUTION.md
+  - Synchronized all version information for consistency
+  - Enhanced badge presentation and functionality
 
 ## [1.0.4] - 2025-07-07
 

@@ -2,7 +2,7 @@
 
 ![Shuffle Analysis](https://img.shields.io/badge/analysis-shuffle_contract-blue.svg)
 ![Technical Report](https://img.shields.io/badge/report-technical-green.svg)
-![Shuffle Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fyour-username%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Freports%2Fshuffle_report.md&count_bg=%234169E1&title_bg=%23555555&icon=microscope&icon_color=%23E7E7E7&title=shuffle+analysis&edge_flat=false)
+![Shuffle Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F4eckd%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Freports%2Fshuffle_report.md&count_bg=%234169E1&title_bg=%23555555&icon=microscope&icon_color=%23E7E7E7&title=shuffle+analysis&edge_flat=false)
 
 ## Executive Summary
 
