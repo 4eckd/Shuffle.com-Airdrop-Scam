@@ -3,7 +3,7 @@
 ![Security](https://img.shields.io/badge/security-critical-red.svg)
 ![Status](https://img.shields.io/badge/malicious_contracts-analyzed-orange.svg)
 ![Warning](https://img.shields.io/badge/interaction-forbidden-red.svg)
-![Security Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F4eckd%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2FSECURITY.md&count_bg=%23DC3545&title_bg=%23555555&icon=shield&icon_color=%23E7E7E7&title=security+visitors&edge_flat=false)
+![Updated](https://img.shields.io/badge/updated-2025--07--08-brightgreen.svg)
 
 ## 🚨 CRITICAL SECURITY WARNING
 

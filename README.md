@@ -1,6 +1,6 @@
 # Shuffle.com Airdrop Scam Analysis Repository
 
-![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)
+![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-green.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
@@ -100,11 +100,12 @@ Our research covers comprehensive analysis of these identified malicious contrac
 ## 📚 Quick Navigation
 
 ### 🚀 Getting Started
-1. **[📖 Documentation Hub](docs/index.md)** - Complete navigation guide and repository structure
-2. **[🔒 Security Guidelines](SECURITY.md)** - Safety protocols and warnings  
-3. **[🔗 Contribution Guidelines](CONTRIBUTION.md)** - How to contribute to security research
-4. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
-5. **[📄 License](LICENSE)** - MIT License terms
+1. **[📚 Documentation Hub](docs/index.md)** - Complete navigation guide and repository structure
+2. **[🔧 API Documentation](docs/api/README.md)** - TypeScript API reference and usage guide
+3. **[🔒 Security Guidelines](SECURITY.md)** - Safety protocols and warnings  
+4. **[🔗 Contribution Guidelines](CONTRIBUTION.md)** - How to contribute to security research
+5. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
+6. **[📄 License](LICENSE)** - MIT License terms
 
 ### 🔍 Deep Dive Analysis
 - **[Primary Contract (SHFL.sol)](SHFL.sol)** - Main shuffle contract decompilation
@@ -157,4 +158,4 @@ The contracts documented in this repository are malicious and designed to defrau
 ---
 
 *Repository maintained by security researchers for community protection*  
-*Last updated: 2025-07-07 | Version: 1.0.0*
+*Last updated: 2025-07-08 | Version: 1.2.0*
