@@ -2,9 +2,11 @@ import { z } from 'zod';
 import {
   ContractAddressSchema,
   ContractAnalysisSchema,
+  AdvancedContractAnalysisSchema,
   SecurityWarningSchema,
   ContractAddress,
   ContractAnalysis,
+  AdvancedContractAnalysis,
   SecurityWarning,
   ValidationError,
   SecurityError,
@@ -40,6 +42,25 @@ export function validateContractAnalysis(analysis: unknown): ContractAnalysis {
       throw new ValidationError(
         `Contract analysis validation failed: ${validationErrors.join(', ')}`,
         'contractAnalysis',
+        analysis
+      );
+    }
+    throw error;
+  }
+}
+
+/**
+ * Validate an advanced contract analysis object
+ */
+export function validateAdvancedContractAnalysis(analysis: unknown): AdvancedContractAnalysis {
+  try {
+    return AdvancedContractAnalysisSchema.parse(analysis);
+  } catch (error) {
+    if (error instanceof z.ZodError) {
+      const validationErrors = error.errors.map(err => `${err.path.join('.')}: ${err.message}`);
+      throw new ValidationError(
+        `Advanced contract analysis validation failed: ${validationErrors.join(', ')}`,
+        'advancedContractAnalysis',
         analysis
       );
     }

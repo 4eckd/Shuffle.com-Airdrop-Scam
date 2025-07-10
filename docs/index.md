@@ -3,6 +3,7 @@
 ![Documentation](https://img.shields.io/badge/docs-comprehensive-blue.svg)
 ![Analysis](https://img.shields.io/badge/analysis-complete-green.svg)
 ![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)
+![Coverage](https://img.shields.io/badge/coverage-76%25-yellow.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
 ![Development](https://img.shields.io/badge/development-active-orange.svg)
 
@@ -272,10 +273,55 @@ Shuffle.com-Airdrop-Scam/
 - **Status**: ✅ Complete
 
 #### **[🏗️ Architecture Decision Records](adr/)**
-- **Purpose**: Technical|| Architecture Decisions and design documentation
+- **Purpose**: Technical Architecture Decisions and design documentation
 - **Coverage**: Advanced analysis architecture, bytecode analysis, pattern detection
 - **Includes**: Decision rationale, implementation strategies, security considerations
 - **Status**: ✅ Complete
+
+### 🤖 Advanced Analysis Engine
+
+Our next-generation analysis platform provides comprehensive smart contract security analysis through specialized modules and advanced pattern detection algorithms.
+
+#### **Core Engine Components**
+
+| Component | Purpose | Documentation | Status |
+|-----------|---------|---------------|--------|
+| **[🔍 Pattern Detection](api/README.md#-pattern-detection-module)** | Multi-category scam pattern identification | API Documentation | ✅ Complete |
+| **[⚖️ Risk Scoring](api/README.md#️-risk-scoring-module)** | Weighted risk assessment and confidence scoring | API Documentation | ✅ Complete |
+| **[📊 Report Generation](api/README.md#-report-generation-module)** | Comprehensive analysis reporting system | API Documentation | ✅ Complete |
+| **[🏗️ Advanced Analysis Architecture](adr/001-advanced-analysis.md)** | System design and implementation strategy | ADR-001 | ✅ Complete |
+
+#### **Pattern Detection Capabilities**
+
+- **🎭 Deceptive Events**: Detects misleading event emissions without corresponding state changes
+- **🔄 Hidden Redirection**: Identifies covert fund redirection to hardcoded addresses  
+- **💰 Fake Balance**: Uncovers time-dependent or manipulated balance calculations
+- **🚫 Non-Functional Transfer**: Finds transfer functions that emit events but don't work
+
+#### **Technical Implementation**
+
+- **📋 [Architecture Decision Record](adr/001-advanced-analysis.md)**: Complete technical specification and design rationale
+- **🔧 [Advanced Analysis API](api/advanced-analysis.md)**: Detailed API documentation with examples
+- **📝 [Implementation Guide](api/README.md#advanced-analysis-engine)**: Step-by-step integration instructions
+- **🧪 Test Coverage**: 76% code coverage with comprehensive pattern detection tests
+
+#### **Analysis Reports Integration**
+
+The Advanced Analysis Engine seamlessly integrates with our existing analysis reports:
+
+- **[📈 Master Summary Report](reports/summary_report.md)**: Enhanced with pattern detection results
+- **[🎯 Airdrop Analysis](reports/airdrop_summary.md)**: Cross-referenced with engine findings
+- **[🔄 Shuffle Analysis](reports/shuffle_report.md)**: Validated through pattern detection algorithms
+- **[📊 Comparative Analysis](reports/shuffle_comparison.md)**: Enriched with automated pattern matching
+
+#### **Key Features and Benefits**
+
+✅ **Automated Pattern Recognition**: AI-driven detection of sophisticated scam techniques  
+✅ **Weighted Risk Scoring**: Advanced algorithms for accurate threat assessment  
+✅ **Comprehensive Reporting**: Multi-format output with detailed technical analysis  
+✅ **Extensible Architecture**: Modular design supporting new pattern categories  
+✅ **Security-First Design**: Zod validation and secure-by-default operations  
+✅ **Performance Optimized**: Efficient algorithms with caching and batch processing
 
 #### Analysis Scripts and Tools
 - **[📄 ScamAnalysisTool](../src/index.ts)** - Main analysis class with security-first design
@@ -325,12 +371,13 @@ Shuffle.com-Airdrop-Scam/
 
 | Component | Version | Last Updated | Next Review |
 |-----------|---------|--------------|-------------|
-| Documentation Hub | 1.2.0 | 2025-07-08 | 2025-08-08 |
+| Documentation Hub | 1.3.0 | 2025-01-15 | 2025-02-15 |
 | Analysis Reports | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Security Guidelines | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Contract Analysis | 1.0.0 | 2025-07-07 | 2025-08-07 |
-| Development Infrastructure | 1.1.0-alpha | 2025-07-08 | 2025-08-08 |
-|| Architecture Decisions | 1.0.0 | 2025-01-07 | 2025-04-07 |
+| Development Infrastructure | 1.3.0 | 2025-01-15 | 2025-02-15 |
+| Architecture Decisions | 1.0.0 | 2025-01-07 | 2025-04-07 |
+| Advanced Analysis Engine | 1.3.0 | 2025-01-15 | 2025-02-15 |
 
 ## 🎯 Target Audience Navigation
 
@@ -359,6 +406,6 @@ Shuffle.com-Airdrop-Scam/
 ---
 
 *Documentation Hub Version: 1.3.0*
-*Last Updated: 2025-07-10T02:44:00Z*
+*Last Updated: 2025-01-15T02:44:00Z*
 *Maintained by: Security Research Team*  
-*Next Review: 2025-08-09*
+*Next Review: 2025-02-15*

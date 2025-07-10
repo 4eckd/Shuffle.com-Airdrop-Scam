@@ -43,9 +43,11 @@
     "typescript": "^5.3.3"
   },
   "dependencies": {
+    "@types/uuid": "^10.0.0",
     "dotenv": "^16.4.5",
     "ethers": "^6.15.0",
     "lru-cache": "^11.1.0",
+    "uuid": "^11.1.0",
     "zod": "^3.22.4"
   },
   "engines": {

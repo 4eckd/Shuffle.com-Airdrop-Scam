@@ -5,6 +5,26 @@ export const ContractAddressSchema = z.string().regex(/^0x[a-fA-F0-9]{40}$/, {
   message: 'Invalid Ethereum address format',
 });
 
+// Pattern Detection Types (defined early for reference)
+export const PatternResultSchema = z.object({
+  detected: z.boolean(),
+  confidence: z.number().min(0).max(1),
+  category: z.enum(['deceptive-events', 'hidden-redirection', 'fake-balance', 'non-functional-transfer']),
+  description: z.string(),
+  evidence: z.array(z.string()),
+  severity: z.enum(['low', 'medium', 'high', 'critical']),
+  metadata: z.record(z.string(), z.unknown()).optional(),
+});
+
+export const SecurityWarningSchema = z.object({
+  level: z.enum(['info', 'warning', 'error', 'critical']),
+  message: z.string().min(1, 'Warning message is required'),
+  contractAddress: ContractAddressSchema.optional(),
+  timestamp: z.date(),
+  category: z.enum(['deceptive-events', 'hidden-redirection', 'fake-balance', 'non-functional-transfer']),
+});
+
+// Basic Contract Analysis Schema (for backward compatibility)
 export const ContractAnalysisSchema = z.object({
   contractAddress: ContractAddressSchema,
   contractName: z.string().min(1, 'Contract name is required'),
@@ -16,12 +36,46 @@ export const ContractAnalysisSchema = z.object({
   metadata: z.record(z.string(), z.unknown()).optional(),
 });
 
-export const SecurityWarningSchema = z.object({
-  level: z.enum(['info', 'warning', 'error', 'critical']),
-  message: z.string().min(1, 'Warning message is required'),
-  contractAddress: ContractAddressSchema.optional(),
-  timestamp: z.date(),
-  category: z.enum(['deceptive-events', 'hidden-redirection', 'fake-balance', 'non-functional-transfer']),
+// Advanced Contract Analysis Schema with full analysis capabilities
+export const AdvancedContractAnalysisSchema = z.object({
+  contractAddress: ContractAddressSchema,
+  contractName: z.string().min(1, 'Contract name is required'),
+  analysisStatus: z.enum(['pending', 'complete', 'failed', 'in-progress']),
+  vulnerabilities: z.array(z.string()),
+  riskLevel: z.enum(['low', 'medium', 'high', 'critical']),
+  analysisDate: z.date(),
+  lastUpdated: z.date(),
+  metadata: z.record(z.string(), z.unknown()).optional(),
+  // Advanced analysis fields
+  bytecode: z.string().optional(), // Contract bytecode
+  bytecodeSize: z.number().optional(), // Size in bytes
+  isContract: z.boolean().optional(), // Whether address is a contract
+  isProxyContract: z.boolean().optional(), // Whether it's a proxy contract
+  patternResults: z.record(z.string(), PatternResultSchema).optional(), // Pattern detection results
+  riskAssessment: z.object({
+    riskScore: z.number().min(0).max(1), // Numeric risk score 0-1
+    confidence: z.number().min(0).max(1), // Overall confidence
+    breakdown: z.object({
+      patternScores: z.record(z.string(), z.object({
+        weight: z.number(),
+        confidence: z.number(),
+        severity: z.enum(['low', 'medium', 'high', 'critical']),
+        contribution: z.number(),
+        detected: z.boolean(),
+      })),
+      baseScore: z.number(),
+      bonusScore: z.number(),
+      penaltyScore: z.number(),
+      finalScore: z.number(),
+    }),
+    explanation: z.object({
+      summary: z.string(),
+      riskFactors: z.array(z.string()),
+      mitigatingFactors: z.array(z.string()),
+      recommendations: z.array(z.string()),
+    }),
+  }).optional(),
+  securityWarnings: z.array(SecurityWarningSchema).optional(), // Generated security warnings
 });
 
 export const AirdropScamPatternSchema = z.object({
@@ -61,6 +115,7 @@ export const EnvironmentConfigSchema = z.object({
 // Export types
 export type ContractAddress = z.infer<typeof ContractAddressSchema>;
 export type ContractAnalysis = z.infer<typeof ContractAnalysisSchema>;
+export type AdvancedContractAnalysis = z.infer<typeof AdvancedContractAnalysisSchema>;
 export type SecurityWarning = z.infer<typeof SecurityWarningSchema>;
 export type AirdropScamPattern = z.infer<typeof AirdropScamPatternSchema>;
 export type AnalysisReport = z.infer<typeof AnalysisReportSchema>;
@@ -71,6 +126,30 @@ export type AnalysisStatus = 'pending' | 'complete' | 'failed' | 'in-progress';
 export type RiskLevel = 'low' | 'medium' | 'high' | 'critical';
 export type WarningLevel = 'info' | 'warning' | 'error' | 'critical';
 export type ScamCategory = 'deceptive-events' | 'hidden-redirection' | 'fake-balance' | 'non-functional-transfer';
+
+// Additional Pattern Detection Types
+
+export const ABISchema = z.array(z.object({
+  name: z.string().optional(),
+  type: z.string(),
+  inputs: z.array(z.object({
+    name: z.string(),
+    type: z.string(),
+    indexed: z.boolean().optional(),
+  })).optional(),
+  outputs: z.array(z.object({
+    name: z.string(),
+    type: z.string(),
+  })).optional(),
+  stateMutability: z.string().optional(),
+  anonymous: z.boolean().optional(),
+}));
+
+export const BytecodeAnalysisSchema = z.string().min(2).regex(/^0x[a-fA-F0-9]*$/);
+
+export type PatternResult = z.infer<typeof PatternResultSchema>;
+export type ABI = z.infer<typeof ABISchema>;
+export type BytecodeAnalysis = z.infer<typeof BytecodeAnalysisSchema>;
 
 // Error types
 export class ValidationError extends Error {
