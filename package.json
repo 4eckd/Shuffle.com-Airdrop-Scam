@@ -1,6 +1,6 @@
 {
   "name": "shuffle-airdrop-scam-analysis",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Comprehensive analysis of sophisticated Ethereum smart contract scams targeting airdrop campaigns and cryptocurrency platforms",
   "main": "index.js",
   "scripts": {
@@ -44,6 +44,8 @@
   },
   "dependencies": {
     "dotenv": "^16.4.5",
+    "ethers": "^6.15.0",
+    "lru-cache": "^11.1.0",
     "zod": "^3.22.4"
   },
   "engines": {

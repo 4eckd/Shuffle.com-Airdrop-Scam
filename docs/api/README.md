@@ -1,6 +1,6 @@
 # API Documentation for ScamAnalysisTool
 
-![Version](https://img.shields.io/badge/version-1.1.0--alpha-blue.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)
 ![TypeScript](https://img.shields.io/badge/typescript-5.3+-blue.svg)
 ![Security](https://img.shields.io/badge/security-first-red.svg)
 
@@ -16,7 +16,12 @@ This documentation covers the usage of `ScamAnalysisTool`, a tool designed exclu
 
 ## Overview
 
-The `ScamAnalysisTool` is a TypeScript class providing comprehensive utilities for identifying and analyzing smart contracts with potential security vulnerabilities and scam patterns. It implements a security-first design approach with built-in validation, warning systems, and protection against known malicious contract addresses.
+The ScamAnalysisTool suite provides comprehensive TypeScript utilities for identifying and analyzing smart contracts with potential security vulnerabilities and scam patterns. It implements a security-first design approach with built-in validation, warning systems, and protection against known malicious contract addresses.
+
+### Core Modules
+
+- **[ScamAnalysisTool](#scamanalysistool)** - Main analysis class for contract security research
+- **[Bytecode Analysis](bytecode.md)** - Advanced bytecode retrieval and caching system
 
 ### Key Features
 
@@ -403,7 +408,45 @@ try {
 
 ---
 
-*API Documentation Version: 1.1.0-alpha*  
-*Last Updated: 2025-07-09*  
+## Bytecode Analysis Module
+
+For advanced bytecode analysis capabilities, see the **[Bytecode Analysis API Documentation](bytecode.md)**.
+
+### Quick Bytecode Example
+
+```typescript
+import { fetchBytecode, isProxyContract, getBytecodeSize } from './src/analysis/bytecode';
+import { JsonRpcProvider } from 'ethers';
+
+const provider = new JsonRpcProvider('https://mainnet.infura.io/v3/YOUR_PROJECT_ID');
+
+async function analyzeBytecode() {
+  try {
+    const bytecode = await fetchBytecode(
+      '0x1234567890123456789012345678901234567890',
+      provider
+    );
+    
+    console.log('Bytecode size:', getBytecodeSize(bytecode), 'bytes');
+    console.log('Is proxy contract:', isProxyContract(bytecode));
+  } catch (error) {
+    console.error('Bytecode analysis failed:', error.message);
+  }
+}
+```
+
+### Bytecode Features
+
+- ✅ **Secure Retrieval** - Safe ethers v6 JsonRpcProvider integration
+- ✅ **LRU Caching** - Efficient in-memory caching (10-min TTL, 1000 entries)
+- ✅ **Batch Operations** - Parallel processing for multiple addresses
+- ✅ **Proxy Detection** - Identification of EIP-1167 and common proxy patterns
+- ✅ **Comprehensive Validation** - Zod schema validation for all inputs
+- ✅ **Error Handling** - Provider-specific error classification and handling
+
+---
+
+*API Documentation Version: 1.3.0*  
+*Last Updated: 2025-07-10*  
 *For more information, see the [main documentation](../index.md)*
 

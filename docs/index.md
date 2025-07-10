@@ -2,7 +2,7 @@
 
 ![Documentation](https://img.shields.io/badge/docs-comprehensive-blue.svg)
 ![Analysis](https://img.shields.io/badge/analysis-complete-green.svg)
-![Version](https://img.shields.io/badge/version-1.2.0-blue.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
 ![Development](https://img.shields.io/badge/development-active-orange.svg)
 
@@ -22,6 +22,7 @@ Welcome to the comprehensive documentation hub for the Shuffle.com Airdrop Scam 
 | **[📚 Educational Resources](#-educational-resources)** | Learning materials and guides | ✅ Complete |
 | **[🏗️ Developer Resources](#%EF%B8%8F-developer-resources)** | Platform protection tools | ✅ Complete |
 | **[🔧 Development Guide](DEVELOPMENT.md)** | TypeScript development setup | ✅ Complete |
+| **[🏗️|||||| Architecture Decisions](adr/)** | Architecture Decision Records | ✅ Complete |
 
 ## 📊 Analysis Reports
 
@@ -270,11 +271,23 @@ Shuffle.com-Airdrop-Scam/
 - **Includes**: Code examples, security warnings, and best practices
 - **Status**: ✅ Complete
 
+#### **[🏗️ Architecture Decision Records](adr/)**
+- **Purpose**: Technical|| Architecture Decisions and design documentation
+- **Coverage**: Advanced analysis architecture, bytecode analysis, pattern detection
+- **Includes**: Decision rationale, implementation strategies, security considerations
+- **Status**: ✅ Complete
+
 #### Analysis Scripts and Tools
 - **[📄 ScamAnalysisTool](../src/index.ts)** - Main analysis class with security-first design
 - **[⚡ Development Scripts](../package.json)** - TypeScript build, test, and development commands
 - **[🧪 Testing Suite](../tests/)** - Comprehensive Jest test coverage with custom matchers
 - **[🔒 Validation Utilities](../src/utils/validation.ts)** - Input sanitization and security checks
+
+#### Architecture Documentation
+- **[📋 ADR-001: Advanced Analysis](adr/001-advanced-analysis.md)** - Comprehensive analysis architecture with bytecode analysis, pattern detection, risk scoring, and reporting
+- **[🔧 CLI Integration Plan](adr/001-advanced-analysis.md#7-cli-integration-plan)** - Command-line interface design and implementation strategy
+- **[🛡️ Security Considerations](adr/001-advanced-analysis.md#security-considerations)** - Security framework for analysis tools
+- **[📊 Sequence Diagrams](adr/001-advanced-analysis.md#51-sequence-diagram)** - Analysis workflow visualization
 
 #### Development Integration
 - **ts-node Support** - Direct TypeScript execution for development
@@ -317,6 +330,7 @@ Shuffle.com-Airdrop-Scam/
 | Security Guidelines | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Contract Analysis | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Development Infrastructure | 1.1.0-alpha | 2025-07-08 | 2025-08-08 |
+|| Architecture Decisions | 1.0.0 | 2025-01-07 | 2025-04-07 |
 
 ## 🎯 Target Audience Navigation
 
@@ -344,7 +358,7 @@ Shuffle.com-Airdrop-Scam/
 
 ---
 
-*Documentation Hub Version: 1.2.0*
-*Last Updated: 2025-07-09T15:44:00Z*  
+*Documentation Hub Version: 1.3.0*
+*Last Updated: 2025-07-10T02:44:00Z*
 *Maintained by: Security Research Team*  
 *Next Review: 2025-08-09*
