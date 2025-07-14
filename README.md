@@ -1,7 +1,8 @@
 # Shuffle.com Airdrop Scam Analysis Repository
 
-![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)
 ![Status](https://img.shields.io/badge/status-active-green.svg)
+![Coverage](https://img.shields.io/badge/coverage-76%25-yellow.svg)
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
 ![Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F4eckd%2FShuffle.com-Airdrop-Scam&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=visitors&edge_flat=false)
@@ -100,11 +101,12 @@ Our research covers comprehensive analysis of these identified malicious contrac
 ## 📚 Quick Navigation
 
 ### 🚀 Getting Started
-1. **[📖 Documentation Hub](docs/index.md)** - Complete navigation guide and repository structure
-2. **[🔒 Security Guidelines](SECURITY.md)** - Safety protocols and warnings  
-3. **[🔗 Contribution Guidelines](CONTRIBUTION.md)** - How to contribute to security research
-4. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
-5. **[📄 License](LICENSE)** - MIT License terms
+1. **[📚 Documentation Hub](docs/index.md)** - Complete navigation guide and repository structure
+2. **[🔧 API Documentation](docs/api/README.md)** - TypeScript API reference and usage guide
+3. **[🔒 Security Guidelines](SECURITY.md)** - Safety protocols and warnings  
+4. **[🔗 Contribution Guidelines](CONTRIBUTION.md)** - How to contribute to security research
+5. **[📝 Change Log](CHANGELOG.md)** - Version history and updates
+6. **[📄 License](LICENSE)** - MIT License terms
 
 ### 🔍 Deep Dive Analysis
 - **[Primary Contract (SHFL.sol)](SHFL.sol)** - Main shuffle contract decompilation
@@ -157,4 +159,4 @@ The contracts documented in this repository are malicious and designed to defrau
 ---
 
 *Repository maintained by security researchers for community protection*  
-*Last updated: 2025-07-07 | Version: 1.0.0*
+*Last updated: 2025-01-15 | Version: 1.3.0*

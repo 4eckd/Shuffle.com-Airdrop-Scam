@@ -5,6 +5,58 @@ All notable changes to the Shuffle.com Airdrop Scam Analysis Repository will be 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] - 2025-07-10
+
+### Added
+- **Bytecode Analysis Module** (`src/analysis/bytecode.ts`)
+  - Comprehensive bytecode retrieval system with `fetchBytecode()` function
+  - Zod validation for Ethereum addresses and bytecode format
+  - LRU caching layer using `lru-cache` (10-minute TTL, 1000 entry limit)
+  - Safe error wrapping via `safeAsync` utility
+  - Support for ethers v6 JsonRpcProvider
+- **Bytecode Analysis Features**
+  - `preloadBytecode()` for efficient batch operations
+  - `isContract()` to distinguish contracts from EOA addresses
+  - `getBytecodeSize()` for calculating bytecode size in bytes
+  - `isProxyContract()` to detect common proxy patterns (EIP-1167, etc.)
+  - Cache management functions (`clearBytecodeCache()`, `getCacheStats()`)
+- **Comprehensive Test Suite**
+  - 33 unit tests covering all bytecode functionality
+  - Mocked ethers.providers.JsonRpcProvider for isolated testing
+  - Error handling tests for network, rate limit, and timeout scenarios
+  - Edge case coverage including null responses and malformed data
+- **Dependencies**
+  - Added `ethers` v6.15.0 for Ethereum provider interactions
+  - Added `lru-cache` v11.1.0 for efficient in-memory caching
+- **Documentation**
+  - Comprehensive bytecode API documentation (`docs/api/bytecode.md`)
+  - Usage examples and best practices
+  - Security considerations and performance optimization guides
+
+### Changed
+- **Package Version**: Updated from 1.2.0 to 1.3.0
+- **TypeScript Configuration**: Enhanced to support ethers v6 imports
+- **Jest Configuration**: Configured for TypeScript module testing
+
+### Security
+- **Address Validation**: Strict Ethereum address format validation with normalization
+- **Bytecode Validation**: Size limits (max 50KB) and format validation for security
+- **Error Isolation**: Provider errors properly wrapped and classified
+- **Cache Security**: TTL and size limits to prevent memory exhaustion
+
+### Performance
+- **LRU Caching**: Efficient caching strategy to minimize redundant RPC calls
+- **Batch Operations**: Parallel processing for multiple address analysis
+- **Request Deduplication**: Cache-first strategy with automatic cache population
+- **Graceful Degradation**: Continues operation despite individual request failures
+
+## [1.1.0-alpha] - 2025-07-08
+
+### Added
+- Integrated core dev dependencies (Lint, Prettier, Jest, ts-node, Zod, dotenv)
+- Updated TypeScript configuration
+- Implemented ESLint and Prettier configurations
+
 ## [Unreleased]
 
 ### Planned

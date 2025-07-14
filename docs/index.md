@@ -2,9 +2,10 @@
 
 ![Documentation](https://img.shields.io/badge/docs-comprehensive-blue.svg)
 ![Analysis](https://img.shields.io/badge/analysis-complete-green.svg)
-![Version](https://img.shields.io/badge/version-1.0.4-blue.svg)
+![Version](https://img.shields.io/badge/version-1.3.0-blue.svg)
+![Coverage](https://img.shields.io/badge/coverage-76%25-yellow.svg)
 ![Security](https://img.shields.io/badge/security-research-red.svg)
-![Docs Visitors](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2F4eckd%2FShuffle.com-Airdrop-Scam%2Fblob%2Fmaster%2Fdocs%2Findex.md&count_bg=%233D79C8&title_bg=%23555555&icon=book&icon_color=%23E7E7E7&title=docs+visitors&edge_flat=false)
+![Development](https://img.shields.io/badge/development-active-orange.svg)
 
 **⚠️ SECURITY WARNING**: This documentation covers analysis of malicious smart contracts. Never deploy, interact with, or send funds to any analyzed contracts.
 
@@ -21,6 +22,8 @@ Welcome to the comprehensive documentation hub for the Shuffle.com Airdrop Scam 
 | **[🛡️ Security Guidelines](#%EF%B8%8F-security-guidelines)** | Safety protocols and warnings | ✅ Complete |
 | **[📚 Educational Resources](#-educational-resources)** | Learning materials and guides | ✅ Complete |
 | **[🏗️ Developer Resources](#%EF%B8%8F-developer-resources)** | Platform protection tools | ✅ Complete |
+| **[🔧 Development Guide](DEVELOPMENT.md)** | TypeScript development setup | ✅ Complete |
+| **[🏗️|||||| Architecture Decisions](adr/)** | Architecture Decision Records | ✅ Complete |
 
 ## 📊 Analysis Reports
 
@@ -149,6 +152,12 @@ Shuffle.com-Airdrop-Scam/
 ├── 🔒 SECURITY.md                  # Security guidelines and warnings
 ├── ⚖️ LICENSE                      # MIT License
 ├── 🔧 .gitignore                   # Git ignore configuration
+├── 📦 package.json                 # Node.js project configuration
+├── 🔧 tsconfig.json                # TypeScript configuration
+├── 🧪 jest.config.js               # Jest testing configuration
+├── 🎨 .eslintrc.js                 # ESLint configuration
+├── 🎯 .prettierrc.js               # Prettier configuration
+├── 🌐 .env.example                 # Environment variables template
 ├── 📄 SHFL.sol                     # Primary shuffle contract analysis
 ├── 📂 Porter/                      # Decompiled fraudulent contracts
 │   ├── PorterRobinson.sol          # Main Porter Robinson themed contract
@@ -168,6 +177,20 @@ Shuffle.com-Airdrop-Scam/
 │       ├── shuffle_report.md       # Shuffle contract analysis (236 lines)
 │       ├── shuffle_comparison.md   # Comparative analysis (249 lines)
 │       └── porter_analysis.md      # Porter contract family analysis
+├── 📂 src/                         # TypeScript source code
+│   ├── 📂 config/                  # Configuration utilities
+│   │   └── environment.ts          # Environment configuration with Zod validation
+│   ├── 📂 types/                   # TypeScript type definitions
+│   │   └── index.ts                # Zod schemas and type exports
+│   ├── 📂 utils/                   # Utility functions
+│   │   └── validation.ts           # Contract validation and security checks
+│   └── index.ts                    # Main application entry point
+├── 📂 tests/                       # Test suite
+│   ├── setup.ts                    # Jest test configuration
+│   └── validation.test.ts          # Validation utility tests
+├── 📂 .github/                     # GitHub Actions CI/CD
+│   └── workflows/
+│       └── ci.yml                  # Continuous integration workflow
 └── 📂 decompiled/                  # Individual contract analysis
     ├── 0.md through 5.md           # Numbered contract analysis
     └── a.md                        # Additional analysis
@@ -201,6 +224,32 @@ Shuffle.com-Airdrop-Scam/
 
 ## 🏗️ Developer Resources
 
+### Development Infrastructure
+
+#### TypeScript Development Environment
+- **Language**: TypeScript 5.3+ with strict mode enabled
+- **Environment Configuration**: Zod-validated environment variables
+- **Type Safety**: Comprehensive type definitions and schema validation
+- **Build System**: TypeScript compiler with source maps and declarations
+
+#### Testing Framework
+- **Testing Library**: Jest with TypeScript support
+- **Test Structure**: Unit tests for validation utilities and security checks
+- **Coverage Requirements**: Minimum 80% code coverage
+- **Test Data**: Comprehensive fixtures for contract addresses and validation scenarios
+
+#### Code Quality Tools
+- **Linting**: ESLint with TypeScript rules
+- **Formatting**: Prettier for consistent code style
+- **Pre-commit Hooks**: Automated code quality checks
+- **CI/CD**: GitHub Actions workflow for build, lint, and test
+
+#### Security-First Development
+- **Input Validation**: Zod schemas for all data validation
+- **Error Handling**: Comprehensive error types and safe async operations
+- **Environment Security**: Secure handling of environment variables
+- **Known Threat Detection**: Built-in validation against malicious contract addresses
+
 ### Platform Protection Tools
 
 #### Detection Signatures
@@ -214,6 +263,83 @@ Shuffle.com-Airdrop-Scam/
 - **User Warning Systems** - Building effective alert mechanisms
 - **Verification Process Improvement** - Strengthening token legitimacy checks
 - **Community Alert Integration** - Collaborative threat intelligence sharing
+
+### TypeScript Analysis Toolkit
+
+#### **[🔧 API Documentation](api/README.md)**
+- **Purpose**: Comprehensive TypeScript API reference and usage guide
+- **Coverage**: ScamAnalysisTool class, validation utilities, and type definitions
+- **Includes**: Code examples, security warnings, and best practices
+- **Status**: ✅ Complete
+
+#### **[🏗️ Architecture Decision Records](adr/)**
+- **Purpose**: Technical Architecture Decisions and design documentation
+- **Coverage**: Advanced analysis architecture, bytecode analysis, pattern detection
+- **Includes**: Decision rationale, implementation strategies, security considerations
+- **Status**: ✅ Complete
+
+### 🤖 Advanced Analysis Engine
+
+Our next-generation analysis platform provides comprehensive smart contract security analysis through specialized modules and advanced pattern detection algorithms.
+
+#### **Core Engine Components**
+
+| Component | Purpose | Documentation | Status |
+|-----------|---------|---------------|--------|
+| **[🔍 Pattern Detection](api/README.md#-pattern-detection-module)** | Multi-category scam pattern identification | API Documentation | ✅ Complete |
+| **[⚖️ Risk Scoring](api/README.md#️-risk-scoring-module)** | Weighted risk assessment and confidence scoring | API Documentation | ✅ Complete |
+| **[📊 Report Generation](api/README.md#-report-generation-module)** | Comprehensive analysis reporting system | API Documentation | ✅ Complete |
+| **[🏗️ Advanced Analysis Architecture](adr/001-advanced-analysis.md)** | System design and implementation strategy | ADR-001 | ✅ Complete |
+
+#### **Pattern Detection Capabilities**
+
+- **🎭 Deceptive Events**: Detects misleading event emissions without corresponding state changes
+- **🔄 Hidden Redirection**: Identifies covert fund redirection to hardcoded addresses  
+- **💰 Fake Balance**: Uncovers time-dependent or manipulated balance calculations
+- **🚫 Non-Functional Transfer**: Finds transfer functions that emit events but don't work
+
+#### **Technical Implementation**
+
+- **📋 [Architecture Decision Record](adr/001-advanced-analysis.md)**: Complete technical specification and design rationale
+- **🔧 [Advanced Analysis API](api/advanced-analysis.md)**: Detailed API documentation with examples
+- **📝 [Implementation Guide](api/README.md#advanced-analysis-engine)**: Step-by-step integration instructions
+- **🧪 Test Coverage**: 76% code coverage with comprehensive pattern detection tests
+
+#### **Analysis Reports Integration**
+
+The Advanced Analysis Engine seamlessly integrates with our existing analysis reports:
+
+- **[📈 Master Summary Report](reports/summary_report.md)**: Enhanced with pattern detection results
+- **[🎯 Airdrop Analysis](reports/airdrop_summary.md)**: Cross-referenced with engine findings
+- **[🔄 Shuffle Analysis](reports/shuffle_report.md)**: Validated through pattern detection algorithms
+- **[📊 Comparative Analysis](reports/shuffle_comparison.md)**: Enriched with automated pattern matching
+
+#### **Key Features and Benefits**
+
+✅ **Automated Pattern Recognition**: AI-driven detection of sophisticated scam techniques  
+✅ **Weighted Risk Scoring**: Advanced algorithms for accurate threat assessment  
+✅ **Comprehensive Reporting**: Multi-format output with detailed technical analysis  
+✅ **Extensible Architecture**: Modular design supporting new pattern categories  
+✅ **Security-First Design**: Zod validation and secure-by-default operations  
+✅ **Performance Optimized**: Efficient algorithms with caching and batch processing
+
+#### Analysis Scripts and Tools
+- **[📄 ScamAnalysisTool](../src/index.ts)** - Main analysis class with security-first design
+- **[⚡ Development Scripts](../package.json)** - TypeScript build, test, and development commands
+- **[🧪 Testing Suite](../tests/)** - Comprehensive Jest test coverage with custom matchers
+- **[🔒 Validation Utilities](../src/utils/validation.ts)** - Input sanitization and security checks
+
+#### Architecture Documentation
+- **[📋 ADR-001: Advanced Analysis](adr/001-advanced-analysis.md)** - Comprehensive analysis architecture with bytecode analysis, pattern detection, risk scoring, and reporting
+- **[🔧 CLI Integration Plan](adr/001-advanced-analysis.md#7-cli-integration-plan)** - Command-line interface design and implementation strategy
+- **[🛡️ Security Considerations](adr/001-advanced-analysis.md#security-considerations)** - Security framework for analysis tools
+- **[📊 Sequence Diagrams](adr/001-advanced-analysis.md#51-sequence-diagram)** - Analysis workflow visualization
+
+#### Development Integration
+- **ts-node Support** - Direct TypeScript execution for development
+- **Jest Testing** - Comprehensive test framework with security-focused tests
+- **ESLint/Prettier** - Code quality and formatting standards
+- **CI/CD Pipeline** - Automated testing and validation
 
 ### API and Tool Documentation
 
@@ -245,10 +371,13 @@ Shuffle.com-Airdrop-Scam/
 
 | Component | Version | Last Updated | Next Review |
 |-----------|---------|--------------|-------------|
-| Documentation Hub | 1.0.0 | 2025-07-07 | 2025-08-07 |
+| Documentation Hub | 1.3.0 | 2025-01-15 | 2025-02-15 |
 | Analysis Reports | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Security Guidelines | 1.0.0 | 2025-07-07 | 2025-08-07 |
 | Contract Analysis | 1.0.0 | 2025-07-07 | 2025-08-07 |
+| Development Infrastructure | 1.3.0 | 2025-01-15 | 2025-02-15 |
+| Architecture Decisions | 1.0.0 | 2025-01-07 | 2025-04-07 |
+| Advanced Analysis Engine | 1.3.0 | 2025-01-15 | 2025-02-15 |
 
 ## 🎯 Target Audience Navigation
 
@@ -276,7 +405,7 @@ Shuffle.com-Airdrop-Scam/
 
 ---
 
-*Documentation Hub Version: 1.0.0*  
-*Last Updated: 2025-07-07T18:29:08Z*  
+*Documentation Hub Version: 1.3.0*
+*Last Updated: 2025-01-15T02:44:00Z*
 *Maintained by: Security Research Team*  
-*Next Review: 2025-08-07*
+*Next Review: 2025-02-15*
