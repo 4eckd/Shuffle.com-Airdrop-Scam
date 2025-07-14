@@ -19,35 +19,31 @@ import { ScamCategory } from '../../src/types';
 
 // Mock ethers to avoid network calls
 jest.mock('ethers', () => ({
-  ethers: {
-    JsonRpcProvider: jest.fn().mockImplementation(() => ({
-      getCode: jest.fn().mockResolvedValue('0x608060405234801561001057600080fd5b50'),
-      getBalance: jest.fn().mockResolvedValue('1000000000000000000'),
-      getTransaction: jest.fn().mockResolvedValue({
-        hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
-        blockNumber: 123456,
-        from: '0x1234567890abcdef1234567890abcdef12345678',
-        to: '0xabcdef1234567890abcdef1234567890abcdef12'
-      }),
-      call: jest.fn().mockResolvedValue('0x0000000000000000000000000000000000000000000000000de0b6b3a7640000')
-    })),
-    Contract: jest.fn().mockImplementation(() => ({
-      connect: jest.fn().mockReturnThis(),
-      balanceOf: jest.fn().mockResolvedValue('1000000000000000000'),
-      transfer: jest.fn().mockResolvedValue({
-        wait: jest.fn().mockResolvedValue({
-          status: 1,
-          events: [{ event: 'Transfer', args: {} }]
-        })
-      })
-    })),
-    utils: {
-      isAddress: jest.fn().mockImplementation((_address: unknown) => 
-        /^0x[a-fA-F0-9]{40}$/.test(_address as string)
-      ),
-      getAddress: jest.fn().mockImplementation((_address: unknown) => (_address as string).toLowerCase())
-    }
-  }
+  JsonRpcProvider: jest.fn().mockImplementation(() => ({
+    getCode: jest.fn().mockResolvedValue('0x608060405234801561001057600080fd5b50' as any),
+    getBalance: jest.fn().mockResolvedValue('1000000000000000000' as any),
+    getTransaction: jest.fn().mockResolvedValue({
+      hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+      blockNumber: 123456,
+      from: '0x1234567890abcdef1234567890abcdef12345678',
+      to: '0xabcdef1234567890abcdef1234567890abcdef12'
+    } as any),
+    call: jest.fn().mockResolvedValue('0x0000000000000000000000000000000000000000000000000de0b6b3a7640000' as any)
+  })),
+  Contract: jest.fn().mockImplementation(() => ({
+    connect: jest.fn().mockReturnThis(),
+    balanceOf: jest.fn().mockResolvedValue('1000000000000000000' as any),
+    transfer: jest.fn().mockResolvedValue({
+      wait: jest.fn().mockResolvedValue({
+        status: 1,
+        events: [{ event: 'Transfer', args: {} }]
+      } as any)
+    } as any)
+  })),
+  isAddress: jest.fn().mockImplementation((_address: unknown) => 
+    /^0x[a-fA-F0-9]{40}$/.test(_address as string)
+  ),
+  getAddress: jest.fn().mockImplementation((_address: unknown) => (_address as string).toLowerCase())
 }));
 
 describe('Pattern Detection', () => {

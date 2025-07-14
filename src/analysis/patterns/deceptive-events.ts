@@ -144,10 +144,11 @@ function calculateConfidence(
   events: EventAnalysis[],
   functions: FunctionAnalysis[]
 ): number {
-  if (events.length === 0) return 0;
-  
   let suspiciousCount = 0;
-  let totalCount = events.length;
+  let totalCount = events.length + functions.length;
+  
+  // If no events or functions, return 0
+  if (totalCount === 0) return 0;
   
   // Check for events without corresponding state changes
   suspiciousCount += events.filter(event => 
@@ -163,7 +164,7 @@ function calculateConfidence(
     )
   ).length;
   
-  // Boost confidence if multiple patterns detected
+  // Calculate confidence based on suspicious patterns found
   const ratio = suspiciousCount / Math.max(totalCount, 1);
   return Math.min(ratio * 1.5, 1.0);
 }

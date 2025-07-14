@@ -23,65 +23,61 @@ import {
 
 // Mock ethers to simulate network interactions
 jest.mock('ethers', () => ({
-  ethers: {
-    JsonRpcProvider: jest.fn().mockImplementation(() => ({
-      getCode: jest.fn().mockResolvedValue('0x608060405234801561001057600080fd5b50'),
-      getBalance: jest.fn().mockResolvedValue('1000000000000000000'),
-      getTransaction: jest.fn().mockResolvedValue({
-        hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+  JsonRpcProvider: jest.fn().mockImplementation(() => ({
+    getCode: jest.fn().mockResolvedValue('0x608060405234801561001057600080fd5b50' as any),
+    getBalance: jest.fn().mockResolvedValue('1000000000000000000' as any),
+    getTransaction: jest.fn().mockResolvedValue({
+      hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+      blockNumber: 123456,
+      from: '0x1234567890abcdef1234567890abcdef12345678',
+      to: '0xabcdef1234567890abcdef1234567890abcdef12',
+      value: '1000000000000000000',
+      gasPrice: '20000000000',
+      gasLimit: '21000',
+      data: '0x',
+      nonce: 42,
+    } as any),
+    call: jest.fn().mockResolvedValue('0x0000000000000000000000000000000000000000000000000de0b6b3a7640000' as any),
+    getLogs: jest.fn().mockResolvedValue([
+      {
+        address: '0x1234567890abcdef1234567890abcdef12345678',
+        topics: ['0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef'],
+        data: '0xabcdef',
         blockNumber: 123456,
-        from: '0x1234567890abcdef1234567890abcdef12345678',
-        to: '0xabcdef1234567890abcdef1234567890abcdef12',
-        value: '1000000000000000000',
-        gasPrice: '20000000000',
-        gasLimit: '21000',
-        data: '0x',
-        nonce: 42,
-      }),
-      call: jest.fn().mockResolvedValue('0x0000000000000000000000000000000000000000000000000de0b6b3a7640000'),
-      getLogs: jest.fn().mockResolvedValue([
-        {
-          address: '0x1234567890abcdef1234567890abcdef12345678',
-          topics: ['0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef'],
-          data: '0xabcdef',
-          blockNumber: 123456,
-          transactionHash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
-        }
-      ]),
-      getBlock: jest.fn().mockResolvedValue({
-        number: 123456,
-        timestamp: 1640995200,
-        hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
-      }),
-    })),
-    Contract: jest.fn().mockImplementation(() => ({
-      connect: jest.fn().mockReturnThis(),
-      balanceOf: jest.fn().mockResolvedValue('1000000000000000000'),
-      transfer: jest.fn().mockResolvedValue({
-        hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
-        wait: jest.fn().mockResolvedValue({
-          status: 1,
-          events: [{ event: 'Transfer', args: {} }],
-          gasUsed: '21000',
-        }),
-      }),
-      approve: jest.fn().mockResolvedValue({
-        hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
-        wait: jest.fn().mockResolvedValue({ status: 1 }),
-      }),
-    })),
-    utils: {
-      isAddress: jest.fn().mockImplementation((_address: unknown) => 
-        /^0x[a-fA-F0-9]{40}$/.test(_address as string)
-      ),
-      getAddress: jest.fn().mockImplementation((_address: unknown) => (_address as string).toLowerCase()),
-      formatEther: jest.fn().mockImplementation((_wei: unknown) => '1.0'),
-      parseEther: jest.fn().mockImplementation((_ether: unknown) => '1000000000000000000'),
-      id: jest.fn().mockImplementation((_text: unknown) => 
-        '0x' + (_text as string).split('').map(c => c.charCodeAt(0).toString(16)).join('').padEnd(64, '0')
-      ),
-    },
-  },
+        transactionHash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+      }
+    ] as any),
+    getBlock: jest.fn().mockResolvedValue({
+      number: 123456,
+      timestamp: 1640995200,
+      hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+    } as any),
+  })),
+  Contract: jest.fn().mockImplementation(() => ({
+    connect: jest.fn().mockReturnThis(),
+    balanceOf: jest.fn().mockResolvedValue('1000000000000000000' as any),
+    transfer: jest.fn().mockResolvedValue({
+      hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+      wait: jest.fn().mockResolvedValue({
+        status: 1,
+        events: [{ event: 'Transfer', args: {} }],
+        gasUsed: '21000',
+      } as any),
+    } as any),
+    approve: jest.fn().mockResolvedValue({
+      hash: '0x1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef',
+      wait: jest.fn().mockResolvedValue({ status: 1 } as any),
+    } as any),
+  })),
+  isAddress: jest.fn().mockImplementation((_address: unknown) => 
+    /^0x[a-fA-F0-9]{40}$/.test(_address as string)
+  ),
+  getAddress: jest.fn().mockImplementation((_address: unknown) => (_address as string).toLowerCase()),
+  formatEther: jest.fn().mockImplementation((_wei: unknown) => '1.0'),
+  parseEther: jest.fn().mockImplementation((_ether: unknown) => '1000000000000000000'),
+  id: jest.fn().mockImplementation((_text: unknown) => 
+    '0x' + (_text as string).split('').map(c => c.charCodeAt(0).toString(16)).join('').padEnd(64, '0')
+  ),
 }));
 
 // Mock file system operations for report generation
